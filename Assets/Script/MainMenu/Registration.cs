@@ -4,6 +4,6 @@ using UnityEngine.UI;
 
 public class Registration : MonoBehaviour
 {
-    string PlayerName;
+    string playerName;
 
 }
