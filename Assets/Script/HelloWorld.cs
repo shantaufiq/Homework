@@ -1,18 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HelloWorld : MonoBehaviour
 {
+
+    
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hello World");
+        gameObject.GetComponent<Button>().onClick.AddListener(tampil);
     }
 
     // Update is called once per frame
-    void Update()
+    private void tampil()
     {
-        
+        Debug.Log("saya taufiq");
     }
+
 }
