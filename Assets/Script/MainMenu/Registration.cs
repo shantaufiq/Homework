@@ -12,7 +12,7 @@ public class Registration : MonoBehaviour
         playerName = inputField.GetComponent<Text>().text;
         textDisplay.GetComponent<Text>().text = "Hello " +playerName+ " Welcome to game"; 
 
-        // print (playerName);
+        print (playerName);
     }
 
 }
