@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +11,8 @@ public class Registration : MonoBehaviour
     public void CollectName(){
         playerName = inputField.GetComponent<Text>().text;
         textDisplay.GetComponent<Text>().text = "Hello " +playerName+ " Welcome to game"; 
+
+        print (playerName);
     }
 
 }
