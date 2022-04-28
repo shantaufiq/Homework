@@ -1,18 +1,20 @@
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class Registration : MonoBehaviour
 {
     string playerName;
 
-    [SerializeField] public GameObject textDisplay;
-    [SerializeField] public GameObject inputField;
+    public GameObject textDisplay;
+    public GameObject inputField;
+    public Button btn;
 
     public void CollectName(){
-        playerName = inputField.GetComponent<Text>().text;
-        textDisplay.GetComponent<Text>().text = "Hello " +playerName+ " Welcome to game"; 
+        playerName = inputField.GetComponent<TextMeshProUGUI>().text;
+        textDisplay.GetComponent<TextMeshProUGUI>().text = "Hello " +playerName+ " Welcome to the game"; 
 
-        print (playerName);
+        // btn.GetComponent<
     }
 
 }
