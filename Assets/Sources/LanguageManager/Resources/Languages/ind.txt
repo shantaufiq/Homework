@@ -1,0 +1,12 @@
+SCENE1=Bagian1
+SCENE2=Bagian2
+HELLO=Hai
+TEXT1=Percobaan pertama.
+BACK=Kembali ke bagian1
+GOTO=Pergi ke bagian2
+MUSIC=Musik
+SOUNDS=Suara
+SETTINGS=Pengaturan
+TSETTING=TAMPILAN PENGATURAN
+TMUSIC=Latar Musik
+TLANGUAGE=Bahasa
