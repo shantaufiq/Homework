@@ -366,8 +366,8 @@ MonoBehaviour:
   cameraTransform: {fileID: 938243373}
   characterController: {fileID: 872954663}
   cameraSensitivity: 10
-  moveSpeed: 0
-  moveInputDeadZone: 0
+  moveSpeed: 8
+  moveInputDeadZone: 10
 --- !u!136 &872954665
 CapsuleCollider:
   m_ObjectHideFlags: 0

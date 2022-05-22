@@ -49,7 +49,7 @@ public class FPSController : MonoBehaviour
 
         if (leftFinggerID != -1)
         {
-            Debug.Log("moving");
+            // Debug.Log("moving");
             Move();
         }
     }
