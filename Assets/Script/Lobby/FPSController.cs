@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FPSController : MonoBehaviour
@@ -25,6 +23,19 @@ public class FPSController : MonoBehaviour
     Vector2 moveTouchStartPosition;
     Vector2 moveInput;
 
+    // player jump
+    [Header("Gravity & Jumping")]
+    public float gravity;
+    Vector3 velocity;
+    public float jumpForce;
+
+    // ground check
+    [Header("Ground Check")]
+    public Transform groundCheck;
+    public LayerMask groundLayers;
+    public float groundCheckRadius;
+    [SerializeField] private bool isGrounded;
+
     private void Start()
     {
         leftFinggerID = -1;
@@ -38,6 +49,7 @@ public class FPSController : MonoBehaviour
 
     private void Update()
     {
+
         // handles input
         GetTouchInput();
 
@@ -51,6 +63,20 @@ public class FPSController : MonoBehaviour
         {
             // Debug.Log("moving");
             Move();
+        }
+
+        // get down character with gravity
+        velocity.y += gravity * Time.deltaTime;
+        characterController.Move(velocity * Time.deltaTime);
+    }
+
+    private void FixedUpdate()
+    {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayers);
+
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
         }
     }
 
@@ -80,12 +106,12 @@ public class FPSController : MonoBehaviour
                     if (t.fingerId == leftFinggerID)
                     {
                         leftFinggerID = -1;
-                        Debug.Log("stop tracking left fingger");
+                        // Debug.Log("stop tracking left fingger");
                     }
                     if (t.fingerId == rightFinggerID)
                     {
                         rightFinggerID = -1;
-                        Debug.Log("stop tracking right fingger");
+                        // Debug.Log("stop tracking right fingger");
                     }
                     break;
                 case TouchPhase.Moved:
@@ -119,7 +145,7 @@ public class FPSController : MonoBehaviour
         transform.Rotate(transform.up, lookInput.x);
     }
 
-    void Move()
+    public void Move()
     {
         // don't move if the touch delta is shooter than the designeted ded zone
         if (moveInput.sqrMagnitude <= moveInputDeadZone) return;
@@ -128,5 +154,14 @@ public class FPSController : MonoBehaviour
         Vector2 movementDirection = moveInput.normalized * moveSpeed * Time.deltaTime;
         // move relatively to the local transform direction 
         characterController.Move(transform.right * movementDirection.x + transform.forward * movementDirection.y);
+    }
+
+    public void Jump()
+    {
+        if (isGrounded)
+        {
+            Debug.Log("player jump");
+            velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+        }
     }
 }
