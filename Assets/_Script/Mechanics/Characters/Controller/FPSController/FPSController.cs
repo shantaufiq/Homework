@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Controller.FPSController
+namespace Homework.Mechanics.Character
 {
 
     public class FPSController : MonoBehaviour
