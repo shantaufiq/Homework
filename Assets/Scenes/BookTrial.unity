@@ -246,6 +246,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4d29b185038c0834a8e690c41664d05e, type: 3}
+    - target: {fileID: 4857975057404813317, guid: 5b271db32d199644db0348e2a12e2d65, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4857975057404813317, guid: 5b271db32d199644db0348e2a12e2d65, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4857975057511306883, guid: 5b271db32d199644db0348e2a12e2d65, type: 3}
       propertyPath: EndFlippingPaper
       value: 3

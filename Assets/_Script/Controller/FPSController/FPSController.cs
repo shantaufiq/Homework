@@ -57,6 +57,11 @@ namespace Homework.Mechanics.Character
             moveInputDeadZone = Mathf.Pow(Screen.width / moveInputDeadZone, 2);
         }
 
+        private void OnEnable()
+        {
+
+        }
+
         private void Update()
         {
 
@@ -75,6 +80,7 @@ namespace Homework.Mechanics.Character
             // get down character with gravity
             velocity.y += gravity * Time.deltaTime;
             characterController.Move(velocity * Time.deltaTime);
+
         }
 
         private void FixedUpdate()

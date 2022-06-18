@@ -7,6 +7,13 @@ GOTO=Go to scene2
 MUSIC=Music
 SOUNDS=Sounds
 SETTINGS=Settings
+-----------------------TITLE-------------------
 TSETTING=MENU SETTING
 TMUSIC=Backsound Music
 TLANGUAGE=Language
+-----------------------BUTTON-------------------
+BTN_CLOSE=Close
+BTN_NEWGAME=New Game
+BTN_LOADGAME=Load Game
+BTN_EXIT=Exit
+BTN_OPEN_WHITEBOARD=Open Whiteboard

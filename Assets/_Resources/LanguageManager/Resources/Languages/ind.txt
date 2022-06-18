@@ -7,6 +7,13 @@ GOTO=Pergi ke bagian2
 MUSIC=Musik
 SOUNDS=Suara
 SETTINGS=Pengaturan
+-----------------------TITLE-------------------
 TSETTING=TAMPILAN PENGATURAN
 TMUSIC=Latar Musik
 TLANGUAGE=Bahasa
+-----------------------Button-------------------
+BTN_CLOSE=Tutup
+BTN_NEWGAME=Permainan Baru
+BTN_LOADGAME=Main Lagi
+BTN_EXIT=Keluar
+BTN_OPEN_WHITEBOARD=Buka Papan Tulis

@@ -11,10 +11,16 @@ namespace Homework.Mechanics.Object
         protected void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out Icharacter character))
-                StartCoroutine(OnCollideBehaviour(character));
+                StartCoroutine(OnColliderBehaviour(character, true));
         }
 
-        public abstract IEnumerator OnCollideBehaviour(Icharacter character);
+        protected void OnTriggerExit(Collider other)
+        {
+            if (other.TryGetComponent(out Icharacter character))
+                StartCoroutine(OnColliderBehaviour(character, false));
+        }
+
+        public abstract IEnumerator OnColliderBehaviour(Icharacter character, bool status);
     }
 }
 
