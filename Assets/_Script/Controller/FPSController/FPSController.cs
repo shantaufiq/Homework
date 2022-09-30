@@ -57,11 +57,6 @@ namespace Homework.Mechanics.Character
             moveInputDeadZone = Mathf.Pow(Screen.width / moveInputDeadZone, 2);
         }
 
-        private void OnEnable()
-        {
-
-        }
-
         private void Update()
         {
 
